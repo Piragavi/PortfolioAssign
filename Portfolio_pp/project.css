@@ -1,0 +1,491 @@
+
+/* =========================================
+   1. GLOBAL SETTINGS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FFFFFF;
+    color: #64748B;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   2. NAVIGATION BAR
+========================================= */
+
+header {
+    width: 100%;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E2E8F0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGO */
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #172554;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #2563EB;
+}
+
+
+/* NAVIGATION LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-links li a {
+    position: relative;
+    text-decoration: none;
+    color: #64748B;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    padding-bottom: 7px;
+}
+
+.nav-links li a:hover {
+    color: #2563EB;
+}
+
+/* ACTIVE NAVIGATION */
+
+.nav-links li a.active {
+    color: #2563EB;
+    font-weight: 600;
+}
+
+.nav-links li a.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #2563EB;
+    bottom: 0;
+    left: 0;
+}
+
+
+/* NAVIGATION BUTTON */
+
+.nav-button {
+    text-decoration: none;
+    background-color: #2563EB;
+    color: #FFFFFF;
+    padding: 11px 23px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #1D4ED8;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   3. PROJECTS SECTION
+========================================= */
+
+.projects {
+    width: 100%;
+    min-height: 100vh;
+    padding: 90px 8%;
+    background-color: #FFFFFF;
+}
+
+
+/* =========================================
+   4. SECTION HEADING
+========================================= */
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.section-label {
+    color: #2563EB;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-heading h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #172554;
+    margin-bottom: 15px;
+}
+
+.section-heading h1 span {
+    color: #2563EB;
+}
+
+.section-description {
+    font-size: 15px;
+    color: #64748B;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   5. PROJECT CONTAINER
+========================================= */
+
+.project-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+
+/* =========================================
+   6. PROJECT CARDS
+========================================= */
+
+.project-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    padding: 30px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+
+    transition: all 0.3s ease;
+}
+
+/* CARD HOVER EFFECT */
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #2563EB;
+
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================
+   7. PROJECT NUMBERS
+========================================= */
+
+.project-number {
+    min-width: 40px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #2563EB;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   8. PROJECT INFORMATION
+========================================= */
+
+.project-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.project-info h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+
+    line-height: 1.5;
+    color: #172554;
+
+    margin-bottom: 13px;
+}
+
+.project-info p {
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.8;
+    color: #64748B;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   9. TECHNOLOGY STACK
+========================================= */
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-bottom: 22px;
+}
+
+.tech-stack span {
+    display: inline-block;
+
+    padding: 7px 11px;
+
+    background-color: #EFF6FF;
+    color: #2563EB;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+    transition: 0.3s ease;
+}
+
+.tech-stack span:hover {
+    background-color: #DBEAFE;
+}
+
+
+/* =========================================
+   10. PROJECT LINKS
+========================================= */
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    text-decoration: none;
+
+    color: #2563EB;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.project-link span {
+    font-size: 17px;
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover {
+    color: #1D4ED8;
+}
+
+.project-link:hover span {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================
+   11. FOOTER
+========================================= */
+
+footer {
+    width: 100%;
+    padding: 25px 8%;
+
+    text-align: center;
+
+    background-color: #F4F7FB;
+    border-top: 1px solid #E2E8F0;
+}
+
+footer p {
+    color: #64748B;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   12. TABLET RESPONSIVE DESIGN
+========================================= */
+
+@media screen and (max-width: 900px) {
+
+    .navbar {
+        padding: 18px 25px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+    }
+
+    .projects {
+        padding: 75px 6%;
+    }
+
+}
+
+
+/* =========================================
+   13. MOBILE RESPONSIVE DESIGN
+========================================= */
+
+@media screen and (max-width: 600px) {
+
+    /* NAVIGATION */
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+        padding: 18px 15px;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links li a {
+        font-size: 12px;
+    }
+
+    .nav-button {
+        padding: 9px 18px;
+    }
+
+
+    /* PROJECT SECTION */
+
+    .projects {
+        padding: 60px 5%;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .section-heading h1 {
+        font-size: 32px;
+    }
+
+    .section-description {
+        font-size: 13px;
+    }
+
+
+    /* PROJECT CARDS */
+
+    .project-card {
+        padding: 22px 18px;
+        gap: 13px;
+    }
+
+    .project-number {
+        min-width: 30px;
+        font-size: 22px;
+    }
+
+    .project-info h2 {
+        font-size: 16px;
+    }
+
+    .project-info p {
+        font-size: 13px;
+    }
+
+
+    /* TECHNOLOGY TAGS */
+
+    .tech-stack {
+        gap: 6px;
+    }
+
+    .tech-stack span {
+        font-size: 10px;
+        padding: 6px 9px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        padding: 20px 5%;
+    }
+
+}
+
+
+/* =========================================
+   14. SMALL MOBILE SCREENS
+========================================= */
+
+@media screen and (max-width: 380px) {
+
+    .project-card {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-number {
+        font-size: 20px;
+    }
+
+    .section-heading h1 {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+}
